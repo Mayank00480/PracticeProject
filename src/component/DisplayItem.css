@@ -1,0 +1,16 @@
+.display{
+    background-color: white;
+    border-radius: 10px;;
+    position : relative;
+    width : 410px;
+    left : 510px;
+    height : 30px;
+    top : 150px;
+    float : left;
+    margin : 5px 0px;
+}
+.display div {
+    position :relative;
+    
+    right : 150px;
+}

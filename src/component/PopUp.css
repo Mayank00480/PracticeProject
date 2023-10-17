@@ -1,0 +1,22 @@
+.pops{
+    background-color: white;
+    height : 200px;
+    width : 400px;
+    position : relative;
+    left : 500px;
+    top : 100px;
+    border-radius: 10px;
+}
+p{
+    position: relative;
+    top:50px;
+}
+button{
+    padding: 5px;
+    background-color: firebrick;
+    color : white;
+    width: 40px;
+    border-radius: 5px;
+    position: relative;
+    top : 50px;
+}

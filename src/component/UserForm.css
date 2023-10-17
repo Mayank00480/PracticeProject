@@ -1,0 +1,24 @@
+.container{
+    background-color: white;
+    padding : 10px;
+    border : 1px solid black;
+    border-radius: 10px;
+    width : 400px;
+    position: relative;
+    left : 500px;
+    top : 100px;
+    height : 200px;
+}
+.inp input { 
+    width : 300px;
+    border-radius: 5px;
+    height : 20px;
+}
+input[type = "submit"]{
+    position: relative;
+    top : 20px;
+    padding : 5px;
+    font-size: 15px;
+    background-color: brown;
+    color : white;
+}

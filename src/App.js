@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React,{useState} from 'react'
 import './App.css';
-
+import UserForm from './component/UserForm';
+import Display from './component/Display';
+import PopUp from './component/PopUp';
+let op;
 function App() {
+ const [arr , setArr] = useState([]);
+ const [help ,setHelp] = useState('help');
+ function ref(value){
+   setHelp(value);
+ }
+  function saveDataHandler(data , popsups){
+  op = popsups;
+  
+ {data.Name == '' && setHelp(data.Name) }
+   
+  {(data.Name.trim().length > 0 && data.Age.trim().length > 0) && setArr((prevState) =>{
+      return [
+        ...prevState , data
+      ]
+    })
+  }// console.log(newArr);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {help == '' && <PopUp Refresh = {ref}/>}
+     {help.trim().length > 0 && <UserForm onSaveData = {saveDataHandler} /> }
+      <Display items = {arr} pop = {op}/>
     </div>
   );
 }
