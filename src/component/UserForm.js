@@ -1,10 +1,15 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import './UserForm.css'
 let popsups = false
 const UserForm = (props) => {
     const[userName , setUserName] = useState('');
     const [age , setAge] = useState('');
     const [collegeName , setCollegeName] = useState('');    
+    const[isFormValid , setFormValid] = useState(false);
+
+    useEffect(() =>{
+        setFormValid(collegeName.trim().length > 0)
+    },[collegeName])
     function userNameHandler(e){
        setUserName(e.target.value)
     }
@@ -40,10 +45,10 @@ const UserForm = (props) => {
       <div className='inp'>
         <label>College Name</label>
         <br />
-        <input type = "text" value ={collegeName} onChange = {collegeNameHandler}/>
+        <input type = "text" value ={collegeName} onChange = {collegeNameHandler} />
       </div>
       <div>
-        <input type = "submit" />
+       { isFormValid && <input type = "submit"/>}
       </div>
       </form>
     </div>
