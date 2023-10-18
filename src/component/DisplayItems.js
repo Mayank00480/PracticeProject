@@ -4,7 +4,7 @@ import './DisplayItem.css'
 const DisplayItems = (props) => {
   return (
     <div className = "display">
-      <div> {props.name}  {props.age}</div>
+      <div> {props.name}  {props.age}  {props.userCollege}</div>
     </div>
   )
 }

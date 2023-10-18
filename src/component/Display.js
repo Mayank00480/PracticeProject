@@ -9,7 +9,7 @@ const Display = (props) => {
         {(props.items.length == 0 && props.op == true) && <PopUp/>} 
       {props.items.length > 0 && props.items.map((item) =>{
       
-       return <> <DisplayItems name = {item.Name} age = {item.Age}/> </>
+       return <> <DisplayItems name = {item.Name} age = {item.Age} userCollege = {item.college}/> </>
       })}
     </div>
   )
